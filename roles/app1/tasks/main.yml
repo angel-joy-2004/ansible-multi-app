@@ -1,0 +1,16 @@
+---
+- name: Create App 1 web directory
+  ansible.builtin.file:
+    path: /var/www/app1
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: "0755"
+
+- name: Deploy App 1 webpage
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: /var/www/app1/index.html
+    owner: www-data
+    group: www-data
+    mode: "0644"

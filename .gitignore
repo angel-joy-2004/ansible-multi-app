@@ -1,0 +1,15 @@
+# SSH private keys
+*.pem
+id_rsa
+id_ed25519
+.ssh/
+
+# Local secret and password files
+.vault_pass
+vault-password.txt
+.env
+.env.*
+
+# Python caches
+__pycache__/
+*.pyc

@@ -1,0 +1,12 @@
+---
+- name: Deploy Nginx and two web applications
+  hosts: webservers
+  become: true
+
+  vars_files:
+    - group_vars/vault.yml
+
+  roles:
+    - nginx
+    - app1
+    - app2

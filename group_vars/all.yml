@@ -1,0 +1,6 @@
+---
+deployment_name: "Ansible Multi-App Demo"
+app1_name: "Application One"
+app2_name: "Application Two"
+app1_port: 8081
+app2_port: 8082

@@ -1,0 +1,25 @@
+# Managed by Ansible
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name _;
+
+    root /var/www/html;
+    index index.html index.htm;
+
+    location /app1/ {
+        root /var/www;
+        index index.html;
+    }
+
+    location /app2/ {
+        root /var/www;
+        index index.html;
+    }
+
+    location = / {
+        return 302 /app1/;
+    }
+}
